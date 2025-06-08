@@ -171,7 +171,12 @@
                              style="height: 200px; object-fit: cover;"
                              alt="{{ $item->judul }}">
                         <div class="card-body">
-                            <h5 class="card-title text-white">{{ $item->judul }}</h5>
+                            <h5 class="card-title text-white">
+                                <a href="{{ route('frontend.berita.show', $item->slug) }}"
+                                   class="text-white text-decoration-none">
+                                    {{ $item->judul }}
+                                </a>
+                            </h5>
                             <div class="d-flex justify-content-between mb-2">
                                 <small class="text-muted">{{ \Carbon\Carbon::parse($item->tanggal)->format('d M Y') }}</small>
                                 <small class="text-muted"><i class="bi-eye me-1"></i>{{ $item->view }}</small>
