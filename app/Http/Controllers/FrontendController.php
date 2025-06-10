@@ -24,7 +24,7 @@ class FrontendController extends Controller
 
     public function tentang()
     {
-        return view('fe.pages.tentang');
+        return view('fe.halaman.tentang');
     }
     public function unggulan()
     {

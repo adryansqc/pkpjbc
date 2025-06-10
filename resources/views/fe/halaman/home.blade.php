@@ -84,7 +84,7 @@
 
                 <p2 class="text-white">Hampir 30 tahun berkiprah, selama itu pula PKP Group dikenal sebagai pengembang besar dan terpercaya. Memiliki keunggulan dari sisi kualitas produk dan legalitas terjamin, menjadikan karya PKP Group selalu menjadi pilihan utama masyarakat dalam memiliki produk property. PT PKP memberikan kemudahan bagi masyarakat untuk memiliki produk property melalui pembiayaan perbankan, karena telah menjalin kerjasama dengan berbagai bank pemerintah dan bank umum nasional.<a rel="nofollow" href="https://www.pkpjbc.com" target="_blank">pkpjbc</a>.</p>
 
-                <a href="#barista-team" class="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4">Selengkapnya</a>
+                <a href="{{ route('frontend.tentang') }}" class="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4">Selengkapnya</a>
             </div>
 
         </div>

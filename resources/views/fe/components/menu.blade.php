@@ -12,11 +12,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-lg-auto">
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{{ route('frontend.home') }}">Home</a>
+                    <a class="nav-link" href="{{ route('frontend.home') }}">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{{ route('frontend.home') }}">About</a>
+                    <a class="nav-link click-scroll {{ Route::currentRouteName() == 'frontend.tentang' ? 'active' : '' }}" href="{{ route('frontend.tentang') }}">About</a>
                 </li>
 
                 <li class="nav-item">
