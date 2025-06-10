@@ -9,30 +9,18 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse">
             <ul class="navbar-nav ms-lg-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('frontend.home') }}">Home</a>
+                    <a class="nav-link {{ Route::is('frontend.home') ? 'active' : '' }}" href="{{ route('frontend.home') }}">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll {{ Route::currentRouteName() == 'frontend.tentang' ? 'active' : '' }}" href="{{ route('frontend.tentang') }}">About</a>
+                    <a class="nav-link {{ Route::is('frontend.tentang') ? 'active' : '' }}" href="{{ route('frontend.tentang') }}">About Us</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{{ route('frontend.home') }}">Daftar Harga</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{{ route('frontend.home') }}">Reviews</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{{ route('frontend.home') }}">Contact</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{{ route('frontend.berita') }}">Berita</a>
+                    <a class="nav-link {{ Route::is('frontend.berita*') ? 'active' : '' }}" href="{{ route('frontend.berita') }}">Berita</a>
                 </li>
             </ul>
 

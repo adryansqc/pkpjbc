@@ -204,36 +204,25 @@
 
         <!-- Galeri -->
         <div class="row g-4">
-          <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
-            <a href="{{ asset('pkpjbc') }}/images/D1.jpg" data-lightbox="galeri" data-title="Galeri JBC 1" class="gallery-image-wrapper">
-              <img src="{{ asset('pkpjbc') }}/images/D1.jpg" class="gallery-image img-fluid rounded shadow" alt="Galeri 1">
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
-            <a href="{{ asset('pkpjbc') }}/images/E1.jpg" data-lightbox="galeri" data-title="Galeri JBC 2" class="gallery-image-wrapper">
-              <img src="{{ asset('pkpjbc') }}/images/E1.jpg" class="gallery-image img-fluid rounded shadow" alt="Galeri 2">
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
-            <a href="{{ asset('pkpjbc') }}/images/E1a.jpg" data-lightbox="galeri" data-title="Galeri JBC 3" class="gallery-image-wrapper">
-              <img src="{{ asset('pkpjbc') }}/images/E1a.jpg" class="gallery-image img-fluid rounded shadow" alt="Galeri 3">
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
-            <a href="{{ asset('pkpjbc') }}/images/E1b.jpg" data-lightbox="galeri" data-title="Galeri JBC 4" class="gallery-image-wrapper">
-              <img src="{{ asset('pkpjbc') }}/images/E1b.jpg" class="gallery-image img-fluid rounded shadow" alt="Galeri 4">
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="500">
-            <a href="{{ asset('pkpjbc') }}/images/E3 C1 B3.jpg" data-lightbox="galeri" data-title="Galeri JBC 5" class="gallery-image-wrapper">
-              <img src="{{ asset('pkpjbc') }}/images/E3 C1 B3.jpg" class="gallery-image img-fluid rounded shadow" alt="Galeri 5">
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="600">
-            <a href="{{ asset('pkpjbc') }}/images/Hotel 1.jpg" data-lightbox="galeri" data-title="Galeri JBC 6" class="gallery-image-wrapper">
-              <img src="{{ asset('pkpjbc') }}/images/Hotel 1.jpg" class="gallery-image img-fluid rounded shadow" alt="Galeri 6">
-            </a>
-          </div>
+            {{-- Loop through $galeri data --}}
+            @forelse($galeri as $item)
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="{{ ($loop->index + 1) * 100 }}"> {{-- Added data-aos-delay based on loop index --}}
+                    <a href="{{ $item->foto ? asset('storage/' . $item->foto) : asset('pkpjbc/images/E1a.jpg') }}"
+                       data-lightbox="galeri"
+                       data-title="{{ $item->judul ?? 'Galeri JBC' }}" {{-- Use item title if available --}}
+                       class="gallery-image-wrapper">
+                        <img src="{{ $item->foto ? asset('storage/' . $item->foto) : asset('pkpjbc/images/E1a.jpg') }}"
+                             class="gallery-image img-fluid rounded shadow"
+                             style="height: 250px; object-fit: cover;" {{-- Added style for consistent height --}}
+                             alt="{{ $item->judul ?? 'Foto Galeri' }}"> {{-- Use item title for alt text --}}
+                    </a>
+                </div>
+            @empty
+                {{-- Message if no gallery items --}}
+                <div class="col-12 text-center">
+                    <p class="text-white">Belum ada galeri yang ditampilkan.</p>
+                </div>
+            @endforelse
         </div>
       </div>
     </div>
@@ -392,45 +381,55 @@
 
 
 
+
+
+{{-- FAQ Section --}}
+<section class="section-padding section-bg2" id="faq-section"> {{-- Menggunakan section-bg2 untuk background berbeda --}}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-12 text-white"> {{-- Sesuaikan lebar kolom --}}
+                <h2 class="text-center mb-4">FAQ</h2>
+
+                <div class="accordion" id="faqAccordion">
+                    {{-- FAQ Item 1 --}}
+                    <div class="accordion-item bg-dark text-white border-secondary"> {{-- Sesuaikan warna background dan border --}}
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Di JBC itu akan dibangun apa saja?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-white-50">
+                                Kawasan Pusat Bisnis dengan konsep superblock yang terdiri dari Mall, Hotel, Convention Center dan Ruko.
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- FAQ Item 2 --}}
+                    <div class="accordion-item bg-dark text-white border-secondary"> {{-- Sesuaikan warna background dan border --}}
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Kapan pembangunan mall akan selesai?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-white-50">
+                                Proses pembangunan Mall JBC sedang underconstruction yang akan di targetkan selesai pada akhir 2026!
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Add more FAQ items here if needed --}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="contact-section section-padding" id="section_5">
     <div class="container">
         <div class="row">
-
-            {{-- <div class="col-lg-12 col-12">
-                <em class="text-white">Say Hello</em>
-                <h2 class="text-white mb-4 pb-lg-2">Contact</h2>
-            </div>
-
-            <div class="col-lg-6 col-12">
-                <form action="#" method="post" class="custom-form contact-form" role="form">
-
-                <div class="row">
-
-                    <div class="col-lg-6 col-12">
-                        <label for="name" class="form-label">Name <sup class="text-danger">*</sup></label>
-
-                        <input type="text" name="name" id="name" class="form-control" placeholder="Jackson" required="">
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <label for="email" class="form-label">Email Address</label>
-
-                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jack@gmail.com" required="">
-                    </div>
-
-                    <div class="col-12">
-                        <label for="message" class="form-label">How can we help?</label>
-
-                        <textarea name="message" rows="4" class="form-control" id="message" placeholder="Message" required=""></textarea>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-5 col-12 mx-auto mt-3">
-                    <button type="submit" class="form-control">Send Message</button>
-                </div>
-            </form>
-            </div> --}}
 
             <div class="col-lg-6 col-12 mx-auto mt-5 mt-lg-0 ps-lg-5">
                 <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.113162169635!2d103.58707458857812!3d-1.6186259495915778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2589d2b4f9cdc7%3A0xbb55e0d4b4bb59a7!2sJambi%20Business%20Center!5e0!3m2!1sid!2sid!4v1696439318921!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

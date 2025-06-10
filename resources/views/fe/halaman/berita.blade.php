@@ -28,7 +28,7 @@
 @endpush
 
 @section('content')
-<section class="hero-section2 d-flex justify-content-center align-items-center" id="section_1">
+<section class="hero-section2 d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="row">
             <div class="col-12">
