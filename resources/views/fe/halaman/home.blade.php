@@ -84,7 +84,7 @@
 
                 <p2 class="text-white">Hampir 30 tahun berkiprah, selama itu pula PKP Group dikenal sebagai pengembang besar dan terpercaya. Memiliki keunggulan dari sisi kualitas produk dan legalitas terjamin, menjadikan karya PKP Group selalu menjadi pilihan utama masyarakat dalam memiliki produk property. PT PKP memberikan kemudahan bagi masyarakat untuk memiliki produk property melalui pembiayaan perbankan, karena telah menjalin kerjasama dengan berbagai bank pemerintah dan bank umum nasional.<a rel="nofollow" href="https://www.pkpjbc.com" target="_blank">pkpjbc</a>.</p>
 
-                <a href="#barista-team" class="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4">Type Ruko</a>
+                <a href="#barista-team" class="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4">Selengkapnya</a>
             </div>
 
         </div>
@@ -281,7 +281,7 @@
 
                 <h2 class="text-white">Price List</h2>
             </div>
-            <div style="text-align: right;" class="mt-3 mb-3">
+            <div style="text-align: right;" class="mb-3">
                 <a href="{{ route('frontend.download-price-list') }}" class="btn custom-btn custom-border-btn mt-3">
                     <i class="fa fa-download me-2"></i>Download Price List
                 </a>
