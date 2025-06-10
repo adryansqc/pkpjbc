@@ -12,23 +12,23 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-lg-auto">
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_1">Home</a>
+                    <a class="nav-link click-scroll" href="{{ route('frontend.home') }}">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_2">About</a>
+                    <a class="nav-link click-scroll" href="{{ route('frontend.home') }}">About</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_3">Daftar Harga</a>
+                    <a class="nav-link click-scroll" href="{{ route('frontend.home') }}">Daftar Harga</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_4">Reviews</a>
+                    <a class="nav-link click-scroll" href="{{ route('frontend.home') }}">Reviews</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                    <a class="nav-link click-scroll" href="{{ route('frontend.home') }}">Contact</a>
                 </li>
 
                 <li class="nav-item">

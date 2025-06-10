@@ -91,69 +91,6 @@
     </div>
 </section>
 
-
-<section class="barista-section section-padding section-bg" id="barista-team">
-    <div class="container">
-        <div class="row justify-content-center">
-
-            <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
-                <em class="text-white">Produk Unggulan</em>
-                <h2 class="text-white">Tipe Ruko Unggulan</h2>
-            </div>
-
-            @forelse($unggulan as $item)
-            <div class="col-lg-3 col-md-6 col-12 mb-4">
-                <div class="team-block-wrap">
-                    <div class="team-block-info d-flex flex-column">
-                        <div class="d-flex mt-auto mb-3">
-                            <p class="badge ms-4"><em>{{ optional($item->type)->nama ?? 'Tipe Tidak Diketahui' }}</em></p>
-                        </div>
-                    </div>
-
-                    <div class="team-block-image-wrap">
-                        <img src="{{ $item->foto ? asset('storage/' . $item->foto) : asset('pkpjbc/images/E1a.jpg') }}"
-                             class="team-block-image img-fluid"
-                             alt="{{ optional($item->type)->nama ?? $item->nama ?? 'Gambar Ruko' }}">
-                    </div>
-                </div>
-            </div>
-            @empty
-            <div class="col-12 text-center">
-                <p class="text-white">Belum ada produk unggulan yang ditampilkan.</p>
-            </div>
-            @endforelse
-
-        </div>
-    </div>
-</section>
-
-<section class="barista-section section-padding section-bg2" id="barista-team">
-    <div class="container">
-        <div class="row justify-content-center">
-
-            <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
-                <em class="text-white">Dokumentasi</em>
-                <h2 class="text-white">Galeri foto</h2>
-            </div>
-
-            @forelse($galeri as $item)
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="card bg-dark overflow-hidden">
-                        <img src="{{ $item->foto ? asset('storage/' . $item->foto) : asset('pkpjbc/images/E1a.jpg') }}"
-                             class="card-img gallery-image"
-                             style="height: 250px; object-fit: cover;"
-                             alt="Foto Galeri">
-                    </div>
-                </div>
-            @empty
-                <div class="col-12 text-center">
-                    <p class="text-white">Belum ada foto yang ditampilkan.</p>
-                </div>
-            @endforelse
-        </div>
-    </div>
-</section>
-
 <section class="barista-section section-padding section-bg3" id="barista-team">
     <div class="container">
         <div class="row justify-content-center">
@@ -204,106 +141,140 @@
 </section>
 
 
-<section class="menu-section section-padding" id="section_3">
+<section class="barista-section section-padding section-bg" id="barista-team">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
 
-            <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-                <div class="menu-block-wrap">
-                    <div class="text-center mb-4 pb-lg-2">
-                        <em class="text-white">Daftar HARGA</em>
-                        <h4 class="text-white">Ruko</h4>
-                    </div>
+            <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
+                <em class="text-white">Produk Unggulan</em>
+                <h2 class="text-white">Tipe Ruko Unggulan</h2>
+            </div>
 
-                    <div class="menu-block">
-                        <div class="d-flex">
-                            <h6>E1 01-42</h6>
-
-                            <span class="underline"></span>
-
-                            <strong class="ms-auto">Rp.2.000.000.000 - Rp.4.000.000.000</strong>
-                        </div>
-
-                        <div class="border-top mt-2 pt-2">
-                            <small>Lebar(m) 6,50 | Panjang(m) 15,00 | Luas(m2) 97,50</small>
+            @forelse($unggulan as $item)
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                <div class="team-block-wrap">
+                    <div class="team-block-info d-flex flex-column">
+                        <div class="d-flex mt-auto mb-3">
+                            <p class="badge ms-4"><em>{{ optional($item->type)->nama ?? 'Tipe Tidak Diketahui' }}</em></p>
                         </div>
                     </div>
 
-                    <div class="menu-block my-4">
-                        <div class="d-flex">
-                            <h6>
-                                E2 17-32
-                            </h6>
-
-                            <span class="underline"></span>
-
-                            <strong class="text-white ms-auto"><del>Rp.4.000.000.000</del></strong>
-
-                            <strong class="ms-2">Rp.2.000.000.000</strong>
-                        </div>
-
-                        <div class="border-top mt-2 pt-2">
-                            <small>Lebar(m) 5,00 | Panjang(m) 16,00 | Luas(m2) 80,00</small>
-                        </div>
+                    <div class="team-block-image-wrap">
+                        <img src="{{ $item->foto ? asset('storage/' . $item->foto) : asset('pkpjbc/images/E1a.jpg') }}"
+                             class="team-block-image img-fluid"
+                             alt="{{ optional($item->type)->nama ?? $item->nama ?? 'Gambar Ruko' }}">
                     </div>
-
-                    <div class="menu-block">
-                        <div class="d-flex">
-                            <h6>W1 01-37
-                                <span class="badge ms-3">Recommend</span>
-                            </h6>
-
-                            <span class="underline"></span>
-
-                            <strong class="ms-auto">Rp.2.000.000.000 - Rp.4.000.000.000</strong>
-                        </div>
-
-                        <div class="border-top mt-2 pt-2">
-                            <small>Lebar(m) 5,00 | Panjang(m) 16,00 | Luas(m2) 80,00</small>
-                        </div>
-                    </div>
-
-                    <div class="menu-block my-4">
-                        <div class="d-flex">
-                            <h6>W2 01-29</h6>
-
-                            <span class="underline"></span>
-
-                            <strong class="ms-auto">Rp.2.000.000.000 - Rp.4.000.000.000</strong>
-                        </div>
-
-                        <div class="border-top mt-2 pt-2">
-                            <small>Lebar(m) 5,00 | Panjang(m) 15,00 | Luas(m2) 75,00</small>
-                        </div>
-                    </div>
-
-                    <div class="menu-block">
-                        <div class="d-flex">
-                            <h6>S</h6>
-
-                            <span class="underline"></span>
-
-                            <strong class="ms-auto">Rp.3.000.000.000 - Rp.5.000.000.000</strong>
-                        </div>
-
-                        <div class="border-top mt-2 pt-2">
-                            <small>Lebar(m) 6,00 | Panjang(m) 20,00 | Luas(m2) 100,00</small>
-                        </div>
-                    </div>
-
-                    <a class="btn custom-btn custom-border-btn smoothscroll me-3" href="https://api.whatsapp.com/send/?phone=62811710188&text=Halo,+saya+tertarik+untuk+membeli+Ruko+Di+JBC&type=phone_number&app_absent=0">
-                        Pesan Sekarang Juga
-                      </a>
                 </div>
             </div>
+            @empty
+            <div class="col-12 text-center">
+                <p class="text-white">Belum ada produk unggulan yang ditampilkan.</p>
+            </div>
+            @endforelse
+
         </div>
     </div>
 </section>
 
+<section class="section-padding galeri-jbc-bg" id="section_4">
+    <div class="container position-relative z-1">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 col-12 text-center mb-5 position-relative">
+            <!-- Aksen garis emas di atas -->
+            <div class="gold-line mb-3 mx-auto"></div>
 
-<section class="reviews-section2 section-padding section-bg" id="section_4">
+            <!-- Subjudul -->
+            <em class="text-muted text-uppercase" style="letter-spacing: 2px;" data-aos="fade-up" data-aos-delay="100">
+            <strong class="text-gold">pkpjbc</strong>
+            </em>
+
+            <!-- Judul utama -->
+            <h2 class="display-4 fw-bold text-gold title-shadow" data-aos="fade-up" data-aos-delay="200">
+              Galeri JBC
+            </h2>
+
+            <!-- Deskripsi -->
+            <!-- <p class="text-white-50 lead mt-3 w-75 mx-auto" data-aos="fade-up" data-aos-delay="400">
+              Koleksi visual terbaik yang merekam kegiatan, pencapaian, dan momen berharga dari komunitas JBC.
+            </p> -->
+
+            <!-- Aksen garis emas di bawah -->
+            <div class="gold-line mt-4 mx-auto"></div>
+        </div>
+
+        <!-- Galeri -->
+        <div class="row g-4">
+          <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+            <a href="{{ asset('pkpjbc') }}/images/D1.jpg" data-lightbox="galeri" data-title="Galeri JBC 1" class="gallery-image-wrapper">
+              <img src="{{ asset('pkpjbc') }}/images/D1.jpg" class="gallery-image img-fluid rounded shadow" alt="Galeri 1">
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+            <a href="{{ asset('pkpjbc') }}/images/E1.jpg" data-lightbox="galeri" data-title="Galeri JBC 2" class="gallery-image-wrapper">
+              <img src="{{ asset('pkpjbc') }}/images/E1.jpg" class="gallery-image img-fluid rounded shadow" alt="Galeri 2">
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+            <a href="{{ asset('pkpjbc') }}/images/E1a.jpg" data-lightbox="galeri" data-title="Galeri JBC 3" class="gallery-image-wrapper">
+              <img src="{{ asset('pkpjbc') }}/images/E1a.jpg" class="gallery-image img-fluid rounded shadow" alt="Galeri 3">
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
+            <a href="{{ asset('pkpjbc') }}/images/E1b.jpg" data-lightbox="galeri" data-title="Galeri JBC 4" class="gallery-image-wrapper">
+              <img src="{{ asset('pkpjbc') }}/images/E1b.jpg" class="gallery-image img-fluid rounded shadow" alt="Galeri 4">
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="500">
+            <a href="{{ asset('pkpjbc') }}/images/E3 C1 B3.jpg" data-lightbox="galeri" data-title="Galeri JBC 5" class="gallery-image-wrapper">
+              <img src="{{ asset('pkpjbc') }}/images/E3 C1 B3.jpg" class="gallery-image img-fluid rounded shadow" alt="Galeri 5">
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="600">
+            <a href="{{ asset('pkpjbc') }}/images/Hotel 1.jpg" data-lightbox="galeri" data-title="Galeri JBC 6" class="gallery-image-wrapper">
+              <img src="{{ asset('pkpjbc') }}/images/Hotel 1.jpg" class="gallery-image img-fluid rounded shadow" alt="Galeri 6">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave Background Overlay -->
+    <div class="wave-bg"></div>
+</section>
+
+{{-- <section class="barista-section section-padding section-bg2" id="barista-team">
     <div class="container">
         <div class="row justify-content-center">
+
+            <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
+                <em class="text-white">Dokumentasi</em>
+                <h2 class="text-white">Galeri foto</h2>
+            </div>
+
+            @forelse($galeri as $item)
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card bg-dark overflow-hidden">
+                        <img src="{{ $item->foto ? asset('storage/' . $item->foto) : asset('pkpjbc/images/E1a.jpg') }}"
+                             class="card-img gallery-image"
+                             style="height: 250px; object-fit: cover;"
+                             alt="Foto Galeri">
+                    </div>
+                </div>
+            @empty
+                <div class="col-12 text-center">
+                    <p class="text-white">Belum ada foto yang ditampilkan.</p>
+                </div>
+            @endforelse
+        </div>
+    </div>
+</section> --}}
+
+
+
+
+<section class="menu-section section-padding" id="section_3">
+    <div class="container">
+        <div class="row">
 
             <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
                 <em class="text-white">Data</em>
@@ -337,7 +308,7 @@
                         <th style="text-align: center;">Luas <br>(m2)</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody style="background-color: white">
                     @foreach ($listProduk as $item)
                         <tr>
                             <td>
@@ -366,7 +337,7 @@
                     @endforeach
                     </tbody>
                 </table>
-                <hr>
+                {{-- <hr>
                     <strong style="color: white;">KETENTUAN:</strong>
                     <ol>
                         <li>Harga dan PPN bisa berubah sewaktu-waktu</li>
@@ -386,127 +357,46 @@
                             Fee hangus.</li>
                         <li>KPR bukan tanggung jawab developer</li>
 
-                    </ol>
+                    </ol> --}}
             </div>
-
         </div>
     </div>
 </section>
-<section class="reviews-section section-padding section-bg" id="section_4">
+
+
+<section class="reviews-section2 section-padding section-bg" id="section_4">
     <div class="container">
         <div class="row justify-content-center">
-
-            <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
-                <em class="text-white">Reviews by Customers</em>
-
-                <h2 class="text-white">Testimonials</h2>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-container timeline-container-left">
-                    <div class="timeline-content">
-                        <div class="reviews-block">
-                            <div class="reviews-block-image-wrap d-flex align-items-center">
-                                <img src="{{ asset('pkpjbc') }}/images/reviews/young-woman-with-round-glasses-yellow-sweater.jpg" class="reviews-block-image img-fluid" alt="">
-
-                                <div class="">
-                                    <h6 class="text-white mb-0">Sandra</h6>
-                                    <em class="text-white"> Customers</em>
-                                </div>
-                            </div>
-
-                            <div class="reviews-block-info">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                <div class="d-flex border-top pt-3 mt-4">
-                                    <strong class="text-white">4.5 <small class="ms-2">Rating</small></strong>
-
-                                    <div class="reviews-group ms-auto">
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-container timeline-container-right">
-                    <div class="timeline-content">
-                        <div class="reviews-block">
-                            <div class="reviews-block-image-wrap d-flex align-items-center">
-                                <img src="{{ asset('pkpjbc') }}/images/reviews/senior-man-white-sweater-eyeglasses.jpg" class="reviews-block-image img-fluid" alt="">
-
-                                <div class="">
-                                    <h6 class="text-white mb-0">Don</h6>
-                                    <em class="text-white"> Customers</em>
-                                </div>
-                            </div>
-
-                            <div class="reviews-block-info">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                <div class="d-flex border-top pt-3 mt-4">
-                                    <strong class="text-white">4.5 <small class="ms-2">Rating</small></strong>
-
-                                    <div class="reviews-group ms-auto">
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-container timeline-container-left">
-                    <div class="timeline-content">
-                        <div class="reviews-block">
-                            <div class="reviews-block-image-wrap d-flex align-items-center">
-                                <img src="{{ asset('pkpjbc') }}/images/reviews/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair.jpg" class="reviews-block-image img-fluid" alt="">
-
-                                <div class="">
-                                    <h6 class="text-white mb-0">Olivia</h6>
-                                    <em class="text-white"> Customers</em>
-                                </div>
-                            </div>
-
-                            <div class="reviews-block-info">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                <div class="d-flex border-top pt-3 mt-4">
-                                    <strong class="text-white">4.5 <small class="ms-2">Rating</small></strong>
-
-                                    <div class="reviews-group ms-auto">
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <strong style="color: white;">KETENTUAN:</strong>
+            <ol>
+                <li>Harga dan PPN bisa berubah sewaktu-waktu</li>
+                <li>Harga Jual sudah termasuk listrik 2200 watt dan PDAM</li>
+                <li>Harga Jual belum termasuk Harga Kelebihan Tanah (jika ada), Biaya AJB, Biaya Balik Nama, BPHTB,
+                    Biaya
+                    KPR
+                    dan Biaya-biaya lain yang
+                    timbul akibat aturan baru pemerintah</li>
+                <li>Harga Kelebihan Tanah adalah Rp.5.000.000,-/m2 untuk selisih luas tanah >3% (belum termasuk PPN)
+                </li>
+                <li>Booking Fee sebesar Rp.25.000.000,- tidak dapat dikembalikan
+                </li>
+                <li>Jika dalam 14 hari sejak pembayaran Booking Fee tidak membayarkan Angsuran Uang Muka, maka
+                    pembelian
+                    dianggap batal dan Booking
+                    Fee hangus.</li>
+                <li>KPR bukan tanggung jawab developer</li>
+            </ol>
         </div>
     </div>
 </section>
+
 
 
 <section class="contact-section section-padding" id="section_5">
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-12 col-12">
+            {{-- <div class="col-lg-12 col-12">
                 <em class="text-white">Say Hello</em>
                 <h2 class="text-white mb-4 pb-lg-2">Contact</h2>
             </div>
@@ -540,7 +430,7 @@
                     <button type="submit" class="form-control">Send Message</button>
                 </div>
             </form>
-            </div>
+            </div> --}}
 
             <div class="col-lg-6 col-12 mx-auto mt-5 mt-lg-0 ps-lg-5">
                 <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.113162169635!2d103.58707458857812!3d-1.6186259495915778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2589d2b4f9cdc7%3A0xbb55e0d4b4bb59a7!2sJambi%20Business%20Center!5e0!3m2!1sid!2sid!4v1696439318921!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

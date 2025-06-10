@@ -24,6 +24,8 @@
 
         <link href="{{ asset('pkpjbc') }}/css/tooplate-barista.css" rel="stylesheet">
 
+        <link href="{{ asset('template') }}/css/tooplate-barista.css" rel="stylesheet">
+
         @stack('style')
 
 <!--
@@ -54,6 +56,13 @@ Bootstrap 5 HTML CSS Template
         <script src="{{ asset('pkpjbc') }}/js/click-scroll.js"></script>
         <script src="{{ asset('pkpjbc') }}/js/vegas.min.js"></script>
         <script src="{{ asset('pkpjbc') }}/js/custom.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>AOS.init({ duration: 1200, once: true });</script>
+
+        <!-- Lightbox -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
         @stack('script')
 
     </body>

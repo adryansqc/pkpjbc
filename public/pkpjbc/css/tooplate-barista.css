@@ -818,7 +818,91 @@ strong {
   color: var(--white-color);
 }
 
+.text-gold {
+    color: #d4af37; /* emas elegan */
+  }
 
+  .title-shadow {
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .gold-line {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #8b6c1f, #d4af37, #8b6c1f);
+    border-radius: 3px;
+    animation: fadeInLine 2s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInLine {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 100px;
+      opacity: 1;
+    }
+  }
+
+  /* Background gradasi animasi: coklat ke emas */
+  .galeri-jbc-bg {
+    position: relative;
+    background: linear-gradient(-45deg, #4e342e, #a1887f, #c69172, #b8993c);
+    background-size: 600% 600%;
+    animation: moveGradient 12s ease infinite;
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  @keyframes moveGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  /* Animasi ombak halus */
+  .wave-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: url('https://www.transparenttextures.com/patterns/soft-wallpaper.png');
+    opacity: 0.05;
+    animation: waveMove 30s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes waveMove {
+    0% {background-position: 0 0;}
+    100% {background-position: 1000px 0;}
+  }
+
+  /* Efek hover galeri */
+  .gallery-image-wrapper {
+    overflow: hidden;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .gallery-image-wrapper:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .gallery-image {
+    transition: transform 0.5s ease;
+  }
+
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
 /*---------------------------------------
   BOOKING SECTION
 -----------------------------------------*/
