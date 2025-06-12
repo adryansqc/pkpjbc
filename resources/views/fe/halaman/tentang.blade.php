@@ -428,7 +428,7 @@
                 <div class="video-container fade-in-up">
                     <div class="ratio ratio-1x1">
                         <video autoplay loop muted class="custom-video">
-                            <source src="{{ asset('pkpjbc/videos/DJI_0892.MP4') }}" type="video/mp4">
+                            <source src="{{ $video && $video->video ? asset('storage/' . $video->video) : asset('pkpjbc/videos/DJI_0892.MP4') }}" type="video/mp4">
                             Browser Anda tidak mendukung video.
                         </video>
                     </div>
@@ -455,18 +455,6 @@
                     <p class="company-description">
                         Dengan adanya jalan tol Trans Sumatera yang direncanakan Pemerintah tersambung hingga Jambi pada 2026 akan membuat kunjungan ke Kota Jambi meningkat dan berpengaruh terhadap perekonomian. Kawasan JBC mempersiapkan infrastruktur yang mampu menampung wisatawan dengan jalan yang lebar dan kapasitas parkir yang banyak.
                     </p>
-                <div class="ratio ratio-1x1">
-                    <video autoplay="" loop="" muted="" class="custom-video" poster="">
-                        <source src="{{ $video && $video->video ? asset('storage/' . $video->video) : asset('pkpjbc/videos/DJI_0892.MP4') }}" type="video/mp4">
-
-                        Your browser does not support the video tag.
-                    </video>
-
-                    <div class="about-video-info d-flex flex-column">
-                        <h4 class="mt-auto">.</h4>
-
-                        <h4>Putra Kurnia Properti.</h4>
-                    </div>
                 </div>
             </div>
         </div>
