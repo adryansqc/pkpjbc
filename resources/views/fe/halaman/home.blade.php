@@ -632,10 +632,8 @@
 <section class="menu-section section-padding" id="section_3">
     <div class="container">
         <div class="row">
-
             <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
                 <em class="text-white">Data</em>
-
                 <h2 class="text-white">Price List</h2>
             </div>
             <div style="text-align: right;" class="mb-3">
@@ -655,7 +653,6 @@
                         <th rowspan="2" style="text-align: center;">Harga Jual <br> Exc. PPN</th>
                         <th rowspan="2" style="text-align: center;">PPN 11%</th>
                         <th rowspan="2" style="text-align: center;">Harga Jual<br> Inc. PPN</th>
-
                     </tr>
                     <tr>
                         <th style="text-align: center;">Lebar <br>(m)</th>
@@ -689,32 +686,10 @@
                             <td align="right">{{ number_format($item->ppn, 0, ',', '.') }}</td>
                             <td align="right">
                                 {{ number_format($item->h_jual_inc_ppn, 0, ',', '.') }}</td>
-
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
-                {{-- <hr>
-                    <strong style="color: white;">KETENTUAN:</strong>
-                    <ol>
-                        <li>Harga dan PPN bisa berubah sewaktu-waktu</li>
-                        <li>Harga Jual sudah termasuk listrik 2200 watt dan PDAM</li>
-                        <li>Harga Jual belum termasuk Harga Kelebihan Tanah (jika ada), Biaya AJB, Biaya Balik Nama, BPHTB,
-                            Biaya
-                            KPR
-                            dan Biaya-biaya lain yang
-                            timbul akibat aturan baru pemerintah</li>
-                        <li>Harga Kelebihan Tanah adalah Rp.5.000.000,-/m2 untuk selisih luas tanah >3% (belum termasuk PPN)
-                        </li>
-                        <li>Booking Fee sebesar Rp.25.000.000,- tidak dapat dikembalikan
-                        </li>
-                        <li>Jika dalam 14 hari sejak pembayaran Booking Fee tidak membayarkan Angsuran Uang Muka, maka
-                            pembelian
-                            dianggap batal dan Booking
-                            Fee hangus.</li>
-                        <li>KPR bukan tanggung jawab developer</li>
-
-                    </ol> --}}
             </div>
         </div>
     </div>
@@ -749,9 +724,6 @@
 
 
 
-
-
-{{-- FAQ Section --}}
 <section class="section-padding section-bg2" id="faq-section"> {{-- Menggunakan section-bg2 untuk background berbeda --}}
     <div class="container">
     <div class="row justify-content-center">
