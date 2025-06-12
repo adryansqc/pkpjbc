@@ -721,7 +721,7 @@
 </section>
 
 
-<section class="reviews-section2 section-padding section-bg" id="section_4">
+{{--  <section class="reviews-section2 section-padding section-bg" id="section_4">
     <div class="container">
         <div class="row justify-content-center">
             <strong style="color: white;">KETENTUAN:</strong>
@@ -745,7 +745,7 @@
             </ol>
         </div>
     </div>
-</section>
+</section>  --}}
 
 
 
@@ -754,43 +754,26 @@
 {{-- FAQ Section --}}
 <section class="section-padding section-bg2" id="faq-section"> {{-- Menggunakan section-bg2 untuk background berbeda --}}
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 col-12 text-white"> {{-- Sesuaikan lebar kolom --}}
-                <h2 class="text-center mb-4">FAQ</h2>
-
-                <div class="accordion" id="faqAccordion">
-                    {{-- FAQ Item 1 --}}
-                    <div class="accordion-item bg-dark text-white border-secondary"> {{-- Sesuaikan warna background dan border --}}
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Di JBC itu akan dibangun apa saja?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-white-50">
-                                Kawasan Pusat Bisnis dengan konsep superblock yang terdiri dari Mall, Hotel, Convention Center dan Ruko.
-                            </div>
-                        </div>
-                    </div>
-
-                    {{-- FAQ Item 2 --}}
-                    <div class="accordion-item bg-dark text-white border-secondary"> {{-- Sesuaikan warna background dan border --}}
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Kapan pembangunan mall akan selesai?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-white-50">
-                                Proses pembangunan Mall JBC sedang underconstruction yang akan di targetkan selesai pada akhir 2026!
-                            </div>
-                        </div>
-                    </div>
-
-                    {{-- Add more FAQ items here if needed --}}
-
-                </div>
-            </div>
+    <div class="row justify-content-center">
+            <strong style="color: white;">KETENTUAN:</strong>
+            <ol>
+                <li>Harga dan PPN bisa berubah sewaktu-waktu</li>
+                <li>Harga Jual sudah termasuk listrik 2200 watt dan PDAM</li>
+                <li>Harga Jual belum termasuk Harga Kelebihan Tanah (jika ada), Biaya AJB, Biaya Balik Nama, BPHTB,
+                    Biaya
+                    KPR
+                    dan Biaya-biaya lain yang
+                    timbul akibat aturan baru pemerintah</li>
+                <li>Harga Kelebihan Tanah adalah Rp.5.000.000,-/m2 untuk selisih luas tanah >3% (belum termasuk PPN)
+                </li>
+                <li>Booking Fee sebesar Rp.25.000.000,- tidak dapat dikembalikan
+                </li>
+                <li>Jika dalam 14 hari sejak pembayaran Booking Fee tidak membayarkan Angsuran Uang Muka, maka
+                    pembelian
+                    dianggap batal dan Booking
+                    Fee hangus.</li>
+                <li>KPR bukan tanggung jawab developer</li>
+            </ol>
         </div>
     </div>
 </section>
@@ -804,7 +787,99 @@
             </div>
 
         </div>
+        
     </div>
+    <style>
+/* Custom CSS untuk menyesuaikan warna FAQ dengan latar belakang kayu */
+.faq-accordion .accordion-item {
+    background: rgba(139, 69, 19, 0.8) !important; /* Coklat transparan */
+    border: 1px solid rgba(160, 82, 45, 0.6) !important; /* Border coklat muda */
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.faq-accordion .accordion-button {
+    background: rgba(160, 82, 45, 0.9) !important; /* Coklat sedang */
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 600;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    background: rgba(101, 67, 33, 0.95) !important; /* Coklat lebih gelap saat terbuka */
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.faq-accordion .accordion-button:focus {
+    border-color: rgba(160, 82, 45, 0.8) !important;
+    box-shadow: 0 0 0 0.25rem rgba(160, 82, 45, 0.25) !important;
+}
+
+.faq-accordion .accordion-body {
+    background: rgba(139, 69, 19, 0.7) !important; /* Coklat transparan untuk body */
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.faq-title {
+    color: #8B4513 !important; /* Coklat gelap untuk judul */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+</style>
+
+<div class="row justify-content-center">
+    <div class="col-lg-10 col-12">
+        <h2 class="text-center mb-4 faq-title">FAQ</h2>
+
+        <div class="accordion faq-accordion" id="faqAccordion">
+            {{-- FAQ Item 1 --}}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseOne" 
+                            aria-expanded="true" 
+                            aria-controls="collapseOne">
+                        Di JBC itu akan dibangun apa saja?
+                    </button>
+                </h2>
+                <div id="collapseOne" 
+                     class="accordion-collapse collapse show" 
+                     aria-labelledby="headingOne" 
+                     data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Kawasan Pusat Bisnis dengan konsep superblock yang terdiri dari Mall, Hotel, Convention Center dan Ruko.
+                    </div>
+                </div>
+            </div>
+
+            {{-- FAQ Item 2 --}}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseTwo" 
+                            aria-expanded="false" 
+                            aria-controls="collapseTwo">
+                        Kapan pembangunan mall akan selesai?
+                    </button>
+                </h2>
+                <div id="collapseTwo" 
+                     class="accordion-collapse collapse" 
+                     aria-labelledby="headingTwo" 
+                     data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Proses pembangunan Mall JBC sedang underconstruction yang akan di targetkan selesai pada akhir 2026!
+                    </div>
+                </div>
+            </div>
+
+            {{-- Add more FAQ items here if needed --}}
+        </div>
+    </div>
+</div>
 </section>
 
 @push('script')
