@@ -19,6 +19,8 @@ class VideoResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-video-camera';
 
+    protected static ?string $navigationGroup = 'Pengaturan App';
+
     public static function form(Form $form): Form
     {
         return $form

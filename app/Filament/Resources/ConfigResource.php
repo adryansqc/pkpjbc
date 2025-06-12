@@ -24,6 +24,8 @@ class ConfigResource extends Resource
 
     protected static ?string $navigationLabel = 'Setting';
 
+    protected static ?string $navigationGroup = 'Pengaturan App';
+
     public static function form(Form $form): Form
     {
         return $form

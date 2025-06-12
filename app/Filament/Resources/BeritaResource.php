@@ -24,6 +24,8 @@ class BeritaResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
+    protected static ?string $navigationGroup = 'Data App';
+
     public static function form(Form $form): Form
     {
         return $form

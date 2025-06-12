@@ -2,12 +2,23 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {{-- <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="author" content=""> --}}
+
+        <meta
+        content="Jambi Business Center dikembangkan oleh PT. Putra Kurnia Properti merupakan bagian dari PKP Group,
+    perusahaan real estate dan developer skala nasional yang telah membangun berbagai proyek perumahan,
+    townhouse, kawasan komersial, mall, villa, hotel dan apartemen yang tersebar di berbagai daerah di
+    Indonesia antara lain di Batam, Jabodetabek, Pekanbaru, Jambi, Bintan, Semarang, Pekalongan,
+    Purwokerto, Yogyakarta, Bali dan Lombok."
+        name="description">
+    <meta content="JBC, Jambi business, jambi,center kota jambi properti" name="keywords">
 
         <title>@yield('title') - PKPJBC</title>
+
+        <link href="{{ asset('real') }}/img/jbc.jpg" rel="icon">
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -18,11 +18,11 @@
 
     /* Background dengan pattern yang elegan */
     .section-bg {
-        background: linear-gradient(135deg, 
-            rgba(218, 165, 32, 0.1) 0%, 
-            rgba(139, 69, 19, 0.15) 25%, 
-            rgba(218, 165, 32, 0.05) 50%, 
-            rgba(139, 69, 19, 0.1) 75%, 
+        background: linear-gradient(135deg,
+            rgba(218, 165, 32, 0.1) 0%,
+            rgba(139, 69, 19, 0.15) 25%,
+            rgba(218, 165, 32, 0.05) 50%,
+            rgba(139, 69, 19, 0.1) 75%,
             rgba(218, 165, 32, 0.08) 100%);
         position: relative;
         overflow: hidden;
@@ -35,7 +35,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: 
+        background-image:
             radial-gradient(circle at 25% 25%, rgba(218, 165, 32, 0.1) 0%, transparent 70%),
             radial-gradient(circle at 75% 75%, rgba(139, 69, 19, 0.08) 0%, transparent 70%),
             radial-gradient(circle at 50% 100%, rgba(218, 165, 32, 0.05) 0%, transparent 70%);
@@ -52,10 +52,10 @@
 
     /* Hero section dengan padding yang lebih tipis dan proporsional */
 .hero-section2 {
-    background: linear-gradient(135deg, 
-        var(--deep-brown) 0%, 
-        var(--dark-gold) 30%, 
-        var(--primary-gold) 70%, 
+    background: linear-gradient(135deg,
+        var(--deep-brown) 0%,
+        var(--dark-gold) 30%,
+        var(--primary-gold) 70%,
         var(--light-gold) 100%);
     position: relative;
     padding: 60px 0 40px; /* Dikurangi dari 120px 0 80px */
@@ -109,7 +109,7 @@
     .hero-section2 {
         padding: 40px 0 30px; /* Lebih tipis untuk mobile */
     }
-    
+
     .breadcrumb {
         padding: 8px 20px;
         font-size: 13px;
@@ -120,12 +120,12 @@
     .hero-section2 {
         padding: 30px 0 25px; /* Sangat tipis untuk mobile kecil */
     }
-    
+
     .breadcrumb {
         padding: 6px 15px;
         font-size: 12px;
     }
-    
+
     .breadcrumb-item {
         font-size: 12px;
     }
@@ -144,7 +144,7 @@
         max-height: 600px;
         object-fit: cover;
         border-radius: 20px;
-        box-shadow: 
+        box-shadow:
             0 20px 40px rgba(0, 0, 0, 0.3),
             0 0 0 1px rgba(218, 165, 32, 0.2),
             inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -160,16 +160,16 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, 
-            transparent, 
-            rgba(255, 255, 255, 0.2), 
+        background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
             transparent);
         transition: left 0.5s ease;
     }
 
     .news-image:hover {
         transform: translateY(-5px) scale(1.02);
-        box-shadow: 
+        box-shadow:
             0 30px 60px rgba(0, 0, 0, 0.4),
             0 0 0 1px rgba(218, 165, 32, 0.4),
             inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -181,15 +181,15 @@
 
     /* Enhanced card design */
     .card-news {
-        background: linear-gradient(145deg, 
-            var(--card-bg) 0%, 
+        background: linear-gradient(145deg,
+            var(--card-bg) 0%,
             rgba(58, 36, 25, 0.95) 100%);
         border-radius: 24px;
         padding: 40px;
         color: white;
         margin-bottom: 40px;
         border: 1px solid rgba(218, 165, 32, 0.2);
-        box-shadow: 
+        box-shadow:
             0 20px 40px rgba(0, 0, 0, 0.3),
             inset 0 1px 0 rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
@@ -205,11 +205,11 @@
         left: 0;
         right: 0;
         height: 2px;
-        background: linear-gradient(90deg, 
-            transparent, 
-            var(--primary-gold), 
-            var(--light-gold), 
-            var(--primary-gold), 
+        background: linear-gradient(90deg,
+            transparent,
+            var(--primary-gold),
+            var(--light-gold),
+            var(--primary-gold),
             transparent);
         animation: shimmer 3s ease-in-out infinite;
     }
@@ -272,9 +272,9 @@
         transform: translateX(-50%);
         width: 60px;
         height: 2px;
-        background: linear-gradient(90deg, 
-            transparent, 
-            var(--primary-gold), 
+        background: linear-gradient(90deg,
+            transparent,
+            var(--primary-gold),
             transparent);
     }
 
@@ -390,9 +390,9 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, 
-            transparent, 
-            rgba(218, 165, 32, 0.3), 
+        background: linear-gradient(90deg,
+            transparent,
+            rgba(218, 165, 32, 0.3),
             transparent);
         animation: loading 1.5s infinite;
     }
@@ -407,24 +407,24 @@
         .flex-news {
             flex-direction: column;
         }
-        
+
         .news-title {
             font-size: 24px;
         }
-        
+
         .card-news {
             padding: 24px;
             border-radius: 16px;
         }
-        
+
         .hero-section2 {
             padding: 80px 0 60px;
         }
-        
+
         .breadcrumb {
             padding: 8px 20px;
         }
-        
+
         .news-section {
             padding: 60px 0;
         }
@@ -434,16 +434,16 @@
         .news-title {
             font-size: 20px;
         }
-        
+
         .card-news {
             padding: 20px;
         }
-        
+
         .recent-item img {
             width: 60px;
             height: 60px;
         }
-        
+
         .recent-item h6 {
             font-size: 14px;
         }
@@ -502,7 +502,7 @@
     </div>
 </section>
 
-<section class="news-section section-padding section-bg">
+<section class="">
     <div class="container">
         <div class="row flex-news d-flex">
             <!-- Kolom Gambar + Detail -->
@@ -545,7 +545,7 @@
                                 </div>
                                 <div class="flex-grow-1">
                                     <h6>
-                                        <a href="{{ route('frontend.berita.show', $recent->slug) }}" 
+                                        <a href="{{ route('frontend.berita.show', $recent->slug) }}"
                                            class="text-decoration-none">
                                            {{ Str::limit($recent->judul, 60) }}
                                         </a>
@@ -557,6 +557,7 @@
                                         <i class="bi-eye me-1"></i>
                                         {{ number_format($recent->view) }}
                                     </small>
+
                                 </div>
                             </div>
                         @endforeach

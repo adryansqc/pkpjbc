@@ -21,6 +21,8 @@ class TypeResource extends Resource
 
     protected static ?string $navigationLabel = 'Kode Ruko';
 
+    protected static ?string $navigationGroup = 'Data App';
+
     public static function form(Form $form): Form
     {
         return $form
