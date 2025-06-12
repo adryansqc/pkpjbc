@@ -18,7 +18,7 @@
     <meta content="" name="description"> --}}
 
     <!-- Favicon -->
-    <link href="{{ asset('real') }}/img/jbc.jpg" rel="icon">
+    <link href="{{ asset('real') }}/images/logojbc.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
