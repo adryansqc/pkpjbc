@@ -12,6 +12,9 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\TextInput; // Pastikan ini di-import
+use Filament\Forms\Components\FileUpload; // Import FileUpload
+use Filament\Forms\Components\Textarea; // Import Textarea
 
 class ConfigResource extends Resource
 {
@@ -25,11 +28,70 @@ class ConfigResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('value')
-                    ->label('Nilai')
-                    ->required()
-                    ->columnSpanFull()
-                    ->maxLength(255),
+
+                Forms\Components\Fieldset::make('Isi Data')
+                    ->schema(function (\Filament\Forms\Get $get, \App\Models\Config $record = null) {
+                        $type = $record ? $record->type : 'text';
+                        $labelName = $record ? $record->name : 'Nilai'; // Default label jika record baru
+
+                        switch ($type) {
+                            case 'number':
+                                return [
+                                    TextInput::make('value')
+                                        ->label($labelName)
+                                        ->required()
+                                        ->numeric()
+                                        ->columnSpanFull()
+                                        ->maxLength(255),
+                                ];
+                            case 'file':
+                                return [
+                                    FileUpload::make('value')
+                                        ->label($labelName)
+                                        ->required()
+                                        ->columnSpanFull()
+                                        ->image()
+                                        ->directory('setting')
+                                        ->visibility('public'),
+                                ];
+                            case 'textarea':
+                                return [
+                                    Textarea::make('value')
+                                        ->label($labelName)
+                                        ->required()
+                                        ->columnSpanFull()
+                                        ->maxLength(65535)
+                                        ->rows(5),
+                                ];
+                            case 'url':
+                                return [
+                                    TextInput::make('value')
+                                        ->label($labelName)
+                                        ->required()
+                                        ->columnSpanFull()
+                                        ->url()
+                                        ->maxLength(255),
+                                ];
+                            case 'email':
+                                return [
+                                    TextInput::make('value')
+                                        ->label($labelName)
+                                        ->required()
+                                        ->columnSpanFull()
+                                        ->email()
+                                        ->maxLength(255),
+                                ];
+                            case 'text':
+                            default:
+                                return [
+                                    TextInput::make('value')
+                                        ->label($labelName) // Menggunakan nama sebagai label
+                                        ->required()
+                                        ->columnSpanFull()
+                                        ->maxLength(255),
+                                ];
+                        }
+                    })->columnSpanFull(),
             ]);
     }
 
