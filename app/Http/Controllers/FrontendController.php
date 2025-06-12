@@ -7,6 +7,7 @@ use App\Models\Foto;
 use App\Models\Galeri;
 use App\Models\Produk;
 use App\Models\ProdukList;
+use App\Models\Video;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
@@ -17,14 +18,16 @@ class FrontendController extends Controller
         $imageSlider = Foto::where('published', 1)->take(2)->get();
         $unggulan = Produk::where('unggulan', 1)->latest()->take(4)->get();
         $galeri = Galeri::where('published', 1)->latest()->take(6)->get();
+        $video = Video::where('aktif', 1)->first();
         $listProduk = ProdukList::orderBy('id', 'asc')->get();
         $berita = Berita::where('status', 1)->latest()->take(3)->get();
-        return view('fe.halaman.home', compact('imageSlider', 'unggulan', 'galeri', 'listProduk', 'berita'));
+        return view('fe.halaman.home', compact('imageSlider', 'unggulan', 'galeri', 'listProduk', 'berita', 'video'));
     }
 
     public function tentang()
     {
-        return view('fe.halaman.tentang');
+        $video = Video::where('aktif', 1)->first();
+        return view('fe.halaman.tentang', compact('video'));
     }
     public function unggulan()
     {
