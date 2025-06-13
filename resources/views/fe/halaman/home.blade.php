@@ -633,58 +633,55 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
-                <em class="text-white">Data</em>
-                <h2 class="text-white">Price List</h2>
+                <em class="text-white" style="font-size: 1.2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Data</em>
+                <h2 class="text-white" style="font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 30px;">Price List</h2>
             </div>
             <div style="text-align: right;" class="mb-3">
-                <a href="{{ route('frontend.download-price-list') }}" class="btn custom-btn custom-border-btn mt-3">
+                <a href="{{ route('frontend.download-price-list') }}" class="btn custom-btn custom-border-btn mt-3" style="background: linear-gradient(135deg, #DAA520, #FFD700); color: #8B4513; font-weight: 600; border: 2px solid #B8860B; text-shadow: none; box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);">
                     <i class="fa fa-download me-2"></i>Download Price List
                 </a>
             </div>
-            <div class="table-responsive">
-                <table id="table" class="table table-striped table-hover table-bordered table-sm"
-                border="1">
-                <thead class="table-dark">
+            <div class="table-responsive" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                <table id="table" class="table table-striped table-hover table-bordered table-sm" border="1" style="margin-bottom: 0;">
+                <thead style="background: linear-gradient(135deg, #8B4513, #CD853F); color: white;">
                     <tr>
-                        <th rowspan="2" style="text-align: center;">Status</th>
-                        <th colspan="2" rowspan="2" style="text-align: center;">Nomor <br>Ruko</th>
-                        <th colspan="3" style="text-align: center;">Ukuran Tanah</th>
-                        <th colspan="2" style="text-align: center;">Bangunan</th>
-                        <th rowspan="2" style="text-align: center;">Harga Jual <br> Exc. PPN</th>
-                        <th rowspan="2" style="text-align: center;">PPN 11%</th>
-                        <th rowspan="2" style="text-align: center;">Harga Jual<br> Inc. PPN</th>
+                        <th rowspan="2" style="text-align: center; vertical-align: middle; border: 1px solid #B8860B; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Status</th>
+                        <th colspan="2" rowspan="2" style="text-align: center; vertical-align: middle; border: 1px solid #B8860B; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Nomor <br>Ruko</th>
+                        <th colspan="3" style="text-align: center; vertical-align: middle; border: 1px solid #B8860B; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Ukuran Tanah</th>
+                        <th colspan="2" style="text-align: center; vertical-align: middle; border: 1px solid #B8860B; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Bangunan</th>
+                        <th rowspan="2" style="text-align: center; vertical-align: middle; border: 1px solid #B8860B; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Harga Jual <br> Exc. PPN</th>
+                        <th rowspan="2" style="text-align: center; vertical-align: middle; border: 1px solid #B8860B; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">PPN 11%</th>
+                        <th rowspan="2" style="text-align: center; vertical-align: middle; border: 1px solid #B8860B; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Harga Jual<br> Inc. PPN</th>
                     </tr>
                     <tr>
-                        <th style="text-align: center;">Lebar <br>(m)</th>
-                        <th style="text-align: center;">Panjang <br>(m)</th>
-                        <th style="text-align: center;">Luas <br>(m2)</th>
-                        <th style="text-align: center;">Type</th>
-                        <th style="text-align: center;">Luas <br>(m2)</th>
+                        <th style="text-align: center; vertical-align: middle; border: 1px solid #B8860B; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Lebar <br>(m)</th>
+                        <th style="text-align: center; vertical-align: middle; border: 1px solid #B8860B; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Panjang <br>(m)</th>
+                        <th style="text-align: center; vertical-align: middle; border: 1px solid #B8860B; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Luas <br>(m2)</th>
+                        <th style="text-align: center; vertical-align: middle; border: 1px solid #B8860B; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Type</th>
+                        <th style="text-align: center; vertical-align: middle; border: 1px solid #B8860B; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Luas <br>(m2)</th>
                     </tr>
                 </thead>
-                <tbody style="background-color: white">
+                <tbody style="background-color: rgba(255,255,255,0.95);">
                     @foreach ($listProduk as $item)
-                        <tr>
-                            <td>
+                        <tr style="transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(218, 165, 32, 0.1)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.95)'">
+                            <td style="text-align: center; vertical-align: middle; border: 1px solid #ddd;">
                                 @if ($item->status == '1')
-                                    <span
-                                        style="color: white; background-color: #ff3b55; border-radius:10px; padding:.25em .4em;">Terjual</span>
+                                    <span style="color: white; background: linear-gradient(135deg, #ff3b55, #ff6b7d); border-radius:10px; padding:.4em .6em; font-weight: 600; box-shadow: 0 2px 8px rgba(255, 59, 85, 0.3);">Terjual</span>
                                 @else
-                                    <span
-                                        style="color: white; background-color: #32a852; border-radius:10px; padding:.25em .4em;">Tersedia</span>
+                                    <span style="color: white; background: linear-gradient(135deg, #32a852, #4caf50); border-radius:10px; padding:.4em .6em; font-weight: 600; box-shadow: 0 2px 8px rgba(50, 168, 82, 0.3);">Tersedia</span>
                                 @endif
                             </td>
-                            <td>{{ $item->kode_ruko }}</td>
-                            <td>{{ $item->no_ruko }}</td>
-                            <td>{{ $item->l_tanah }}</td>
-                            <td>{{ $item->p_tanah }}</td>
-                            <td>{{ $item->luas_tanah }}</td>
-                            <td>{{ $item->type_bangunan }}</td>
-                            <td>{{ $item->l_bangunan }}</td>
-                            <td align="right">
+                            <td style="text-align: center; vertical-align: middle; border: 1px solid #ddd; font-weight: 600; color: #8B4513;">{{ $item->kode_ruko }}</td>
+                            <td style="text-align: center; vertical-align: middle; border: 1px solid #ddd; font-weight: 600; color: #8B4513;">{{ $item->no_ruko }}</td>
+                            <td style="text-align: center; vertical-align: middle; border: 1px solid #ddd; color: #333;">{{ $item->l_tanah }}</td>
+                            <td style="text-align: center; vertical-align: middle; border: 1px solid #ddd; color: #333;">{{ $item->p_tanah }}</td>
+                            <td style="text-align: center; vertical-align: middle; border: 1px solid #ddd; color: #333;">{{ $item->luas_tanah }}</td>
+                            <td style="text-align: center; vertical-align: middle; border: 1px solid #ddd; font-weight: 600; color: #8B4513;">{{ $item->type_bangunan }}</td>
+                            <td style="text-align: center; vertical-align: middle; border: 1px solid #ddd; color: #333;">{{ $item->l_bangunan }}</td>
+                            <td align="right" style="vertical-align: middle; border: 1px solid #ddd; font-weight: 600; color: #B8860B;">
                                 {{ number_format($item->h_jual_exc_ppn, 0, ',', '.') }}</td>
-                            <td align="right">{{ number_format($item->ppn, 0, ',', '.') }}</td>
-                            <td align="right">
+                            <td align="right" style="vertical-align: middle; border: 1px solid #ddd; font-weight: 600; color: #B8860B;">{{ number_format($item->ppn, 0, ',', '.') }}</td>
+                            <td align="right" style="vertical-align: middle; border: 1px solid #ddd; font-weight: 700; color: #8B4513; background: rgba(218, 165, 32, 0.1);">
                                 {{ number_format($item->h_jual_inc_ppn, 0, ',', '.') }}</td>
                         </tr>
                     @endforeach
@@ -694,7 +691,6 @@
         </div>
     </div>
 </section>
-
 
 {{--  <section class="reviews-section2 section-padding section-bg" id="section_4">
     <div class="container">
@@ -724,31 +720,36 @@
 
 
 
-<section class="section-padding section-bg2" id="faq-section"> {{-- Menggunakan section-bg2 untuk background berbeda --}}
+<section class="section-padding section-bg2" id="faq-section">
     <div class="container">
-    <div class="row justify-content-center">
-            <strong style="color: white;">KETENTUAN:</strong>
-            <ol>
-                <li>Harga dan PPN bisa berubah sewaktu-waktu</li>
-                <li>Harga Jual sudah termasuk listrik 2200 watt dan PDAM</li>
-                <li>Harga Jual belum termasuk Harga Kelebihan Tanah (jika ada), Biaya AJB, Biaya Balik Nama, BPHTB,
-                    Biaya
-                    KPR
-                    dan Biaya-biaya lain yang
-                    timbul akibat aturan baru pemerintah</li>
-                <li>Harga Kelebihan Tanah adalah Rp.5.000.000,-/m2 untuk selisih luas tanah >3% (belum termasuk PPN)
-                </li>
-                <li>Booking Fee sebesar Rp.25.000.000,- tidak dapat dikembalikan
-                </li>
-                <li>Jika dalam 14 hari sejak pembayaran Booking Fee tidak membayarkan Angsuran Uang Muka, maka
-                    pembelian
-                    dianggap batal dan Booking
-                    Fee hangus.</li>
+        <div class="row justify-content-center">
+            <strong style="color: white; font-size: 1.5rem; margin-bottom: 20px; display: block; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">KETENTUAN:</strong>
+            <ol style="color: white; font-size: 1.1rem; line-height: 1.8; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); background: rgba(0,0,0,0.3); padding: 30px; border-radius: 10px; backdrop-filter: blur(5px);">
+                <li style="margin-bottom: 15px;">Harga dan PPN bisa berubah sewaktu-waktu</li>
+                <li style="margin-bottom: 15px;">Harga Jual sudah termasuk listrik 2200 watt dan PDAM</li>
+                <li style="margin-bottom: 15px;">Harga Jual belum termasuk Harga Kelebihan Tanah (jika ada), Biaya AJB, Biaya Balik Nama, BPHTB, Biaya KPR dan Biaya-biaya lain yang timbul akibat aturan baru pemerintah</li>
+                <li style="margin-bottom: 15px;">Harga Kelebihan Tanah adalah Rp.5.000.000,-/m2 untuk selisih luas tanah >3% (belum termasuk PPN)</li>
+                <li style="margin-bottom: 15px;">Booking Fee sebesar Rp.25.000.000,- tidak dapat dikembalikan</li>
+                <li style="margin-bottom: 15px;">Jika dalam 14 hari sejak pembayaran Booking Fee tidak membayarkan Angsuran Uang Muka, maka pembelian dianggap batal dan Booking Fee hangus.</li>
                 <li>KPR bukan tanggung jawab developer</li>
             </ol>
         </div>
     </div>
 </section>
+
+<style>
+.section-bg2 {
+    background: linear-gradient(135deg, #8B4513, #CD853F, #DAA520, #B8860B);
+    background-size: 400% 400%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+</style>
 
 <section class="contact-section section-padding" id="section_5">
     <div class="container">
