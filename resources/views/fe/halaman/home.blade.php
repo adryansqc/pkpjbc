@@ -148,7 +148,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
+    background:
         radial-gradient(circle at 20% 50%, rgba(255,215,0,0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(255,223,186,0.08) 0%, transparent 50%),
         radial-gradient(circle at 40% 80%, rgba(218,165,32,0.06) 0%, transparent 50%);
@@ -424,11 +424,11 @@
     .section-title {
         font-size: 2.5rem;
     }
-    
+
     .news-card {
         margin-bottom: 25px;
     }
-    
+
     .main-cta-btn {
         padding: 12px 25px;
         font-size: 0.9rem;
@@ -444,7 +444,7 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    
+
     <div class="container" style="position: relative; z-index: 3;">
         <div class="row justify-content-center">
             <!-- Professional Title Section -->
@@ -453,15 +453,15 @@
                     Info & Berita Terkini
                 </h2>
                 <p class="section-subtitle">
-                    Tetap terinformasi dengan kabar dan kegiatan terbaru dari kami. 
+                    Tetap terinformasi dengan kabar dan kegiatan terbaru dari kami.
                     Dapatkan update terkini seputar layanan dan inovasi terdepan.
                 </p>
             </div>
 
             <!-- News Cards Loop -->
             @forelse($berita as $index => $item)
-                <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex align-items-stretch" 
-                     data-aos="zoom-in" 
+                <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex align-items-stretch"
+                     data-aos="zoom-in"
                      data-aos-delay="{{ 150 + ($index * 100) }}"
                      data-aos-duration="800">
                     <div class="news-card tilt-card shadow-lg w-100">
@@ -470,7 +470,7 @@
                                  alt="{{ $item->judul }}"
                                  class="w-100 h-100"
                                  style="object-fit: cover; object-position: center;">
-                            
+
                             <!-- Luxury Overlay -->
                             <div class="news-overlay">
                                 <div style="border-left: 4px solid #FFD700; padding-left: 15px;">
@@ -484,24 +484,24 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="news-content" style="padding: 30px;">
                             <h5 class="news-title">{{ Str::limit($item->judul, 65) }}</h5>
-                            
+
                             @if(isset($item->excerpt) || isset($item->content))
                                 <p class="news-excerpt" style="color: #5a5a5a; font-size: 1rem; line-height: 1.7; margin-bottom: 20px;">
                                     {{ Str::limit($item->excerpt ?? strip_tags($item->content ?? ''), 120) }}
                                 </p>
                             @endif
-                            
+
                             <div class="news-meta" style="align-items: center; padding-top: 15px; border-top: 1px solid #f0f0f0;">
                                 <span class="news-date" style="color: #888; font-weight: 500;">
                                     <i class="bi bi-clock me-1" style="color: #c98c4c;"></i>
                                     {{ $item->created_at ? $item->created_at->format('d M Y') : 'Baru saja' }}
                                 </span>
-                                
+
                                 @if(isset($item->slug))
-                                    <a href="{{ route('frontend.berita.show', $item->slug) }}" 
+                                    <a href="{{ route('frontend.berita.show', $item->slug) }}"
                                        class="read-more-btn">
                                         <i class="bi bi-arrow-right me-1"></i>
                                         Baca Selengkapnya
@@ -524,7 +524,7 @@
                             Belum Ada Berita
                         </h4>
                         <p style="color: rgba(255, 255, 255, 0.6);">
-                            Berita dan informasi terbaru akan segera hadir. 
+                            Berita dan informasi terbaru akan segera hadir.
                             Pantau terus halaman ini untuk mendapatkan update terkini.
                         </p>
                     </div>
@@ -544,7 +544,13 @@
 </section>
 
 
-<section class="section-padding galeri-jbc-bg" id="section_4">
+<section class="section-padding news-bg" id="section_4">
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
     <div class="container position-relative z-1">
       <div class="row justify-content-center">
         <div class="col-lg-12 col-12 text-center mb-5 position-relative">
@@ -725,7 +731,7 @@
             </div>
 
         </div>
-        
+
     </div>
     <style>
 /* Custom CSS untuk menyesuaikan warna FAQ dengan latar belakang kayu */
@@ -773,18 +779,18 @@
             {{-- FAQ Item 1 --}}
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" 
-                            type="button" 
-                            data-bs-toggle="collapse" 
-                            data-bs-target="#collapseOne" 
-                            aria-expanded="true" 
+                    <button class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="true"
                             aria-controls="collapseOne">
                         Di JBC itu akan dibangun apa saja?
                     </button>
                 </h2>
-                <div id="collapseOne" 
-                     class="accordion-collapse collapse show" 
-                     aria-labelledby="headingOne" 
+                <div id="collapseOne"
+                     class="accordion-collapse collapse show"
+                     aria-labelledby="headingOne"
                      data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                         Kawasan Pusat Bisnis dengan konsep superblock yang terdiri dari Mall, Hotel, Convention Center dan Ruko.
@@ -795,18 +801,18 @@
             {{-- FAQ Item 2 --}}
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" 
-                            type="button" 
-                            data-bs-toggle="collapse" 
-                            data-bs-target="#collapseTwo" 
-                            aria-expanded="false" 
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
                             aria-controls="collapseTwo">
                         Kapan pembangunan mall akan selesai?
                     </button>
                 </h2>
-                <div id="collapseTwo" 
-                     class="accordion-collapse collapse" 
-                     aria-labelledby="headingTwo" 
+                <div id="collapseTwo"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingTwo"
                      data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                         Proses pembangunan Mall JBC sedang underconstruction yang akan di targetkan selesai pada akhir 2026!
