@@ -36,7 +36,7 @@
                   <h1>PKPJBC</h1>
 
                   <p class="text-white mb-4 pb-lg-2">
-                    PT. PUTRA <em>KURNIA</em> PROPERTI.
+                    PT. PUTRA KURNIA PROPERTI.
                   </p>
 
                   <a class="btn custom-btn custom-border-btn smoothscroll me-3" href="#section_2">
@@ -67,7 +67,7 @@
                     </video>
 
                     <div class="about-video-info d-flex flex-column">
-                        <h4 class="mt-auto">.</h4>
+                        <h4 class="mt-auto"></h4>
 
                         <h4>Putra Kurnia Properti.</h4>
                     </div>
@@ -561,11 +561,6 @@
               Galeri JBC
             </h2>
 
-            <!-- Deskripsi -->
-            <!-- <p class="text-white-50 lead mt-3 w-75 mx-auto" data-aos="fade-up" data-aos-delay="400">
-              Koleksi visual terbaik yang merekam kegiatan, pencapaian, dan momen berharga dari komunitas JBC.
-            </p> -->
-
             <!-- Aksen garis emas di bawah -->
             <div class="gold-line mt-4 mx-auto"></div>
         </div>
@@ -598,36 +593,6 @@
     <!-- Wave Background Overlay -->
     <div class="wave-bg"></div>
 </section>
-
-{{-- <section class="barista-section section-padding section-bg2" id="barista-team">
-    <div class="container">
-        <div class="row justify-content-center">
-
-            <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
-                <em class="text-white">Dokumentasi</em>
-                <h2 class="text-white">Galeri foto</h2>
-            </div>
-
-            @forelse($galeri as $item)
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="card bg-dark overflow-hidden">
-                        <img src="{{ $item->foto ? asset('storage/' . $item->foto) : asset('pkpjbc/images/E1a.jpg') }}"
-                             class="card-img gallery-image"
-                             style="height: 250px; object-fit: cover;"
-                             alt="Foto Galeri">
-                    </div>
-                </div>
-            @empty
-                <div class="col-12 text-center">
-                    <p class="text-white">Belum ada foto yang ditampilkan.</p>
-                </div>
-            @endforelse
-        </div>
-    </div>
-</section> --}}
-
-
-
 
 <section class="menu-section section-padding" id="section_3">
     <div class="container">

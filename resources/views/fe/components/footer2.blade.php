@@ -10,21 +10,19 @@
                     {{ $config['alamat'] ?? 'Jl. Kapt. A. Bakaruddin, Kelurahan Selamat, Kecamatan Danau Sipin, Kota Jambi, 36124' }}
                 </strong>
 
-                <ul class="social-icon mt-4">
-                    <li class="social-icon-item">
-                        <a href="{{ $config['facebook'] }}" class="social-icon-link bi-facebook" target="_blank">
-                        </a>
-                    </li>
-
-                    <li class="social-icon-item">
-                        <a href="{{ $config['twitter'] }}" target="_new" class="social-icon-link bi-twitter" target="_blank">
-                        </a>
-                    </li>
-
-                    <li class="social-icon-item">
-                        <a href="{{ $config['whatsapp'] }}" class="social-icon-link bi-whatsapp" target="_blank">
-                        </a>
-                    </li>
+                <ul class="social-icon mt-4">                     
+                    <li class="social-icon-item">                         
+                        <a href="https://wa.me/6281171018841" class="social-icon-link bi-whatsapp" target="_blank">                         
+                        </a>                     
+                    </li>                      
+                    <li class="social-icon-item">                         
+                        <a href="https://www.instagram.com/jambibusinesscenter/" class="social-icon-link bi-instagram" target="_blank">                         
+                        </a>                     
+                    </li>                      
+                    <li class="social-icon-item">                         
+                        <a href="mailto:{{ $config['email'] ?? "sales@pkpjbc.com" }}" class="social-icon-link bi-envelope">                         
+                        </a>                     
+                    </li>                 
                 </ul>
             </div>
 
@@ -34,7 +32,7 @@
                 <p class="d-flex mb-1">
                     <strong class="me-2">Phone:</strong>
                     <a href="tel: 305-240-9671" class="site-footer-link">
-                        +{{ $config['phone'] ?? '62 811 710 188' }}
+                        {{ $config['phone'] ?? '62 811 710 188' }}
                     </a>
                 </p>
 
