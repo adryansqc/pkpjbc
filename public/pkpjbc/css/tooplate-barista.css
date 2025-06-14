@@ -547,7 +547,7 @@ strong {
   background-color: var(--p-color);
   position: relative;
   overflow: hidden;
-  min-height: 435px;
+  min-height: 200px;
   text-align: center;
 }
 

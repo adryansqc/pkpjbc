@@ -253,6 +253,16 @@
         margin-bottom: 20px;
     }
 
+
+    .news-content img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
     /* Recent news enhancements */
     .recent-news-title {
         color: var(--primary-gold);
