@@ -9,7 +9,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse">
+        <div class="navbar-collapse collapse" id="navbarNav">
             <ul class="navbar-nav ms-lg-auto">
                 <li class="nav-item">
                     <a class="nav-link {{ Route::is('frontend.home') ? 'active' : '' }}" href="{{ route('frontend.home') }}">Home</a>

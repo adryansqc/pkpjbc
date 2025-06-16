@@ -118,6 +118,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12 text-center mt-4" data-aos="fade-up">
+                    <a href="{{ route('frontend.berita.show', $item->slug) }}"
+                        class="btn custom-btn custom-border-btn btn-sm mt-2">
+                        Baca Selengkapnya
+                        <i class="bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
             @empty
                 <div class="col-12 text-center" data-aos="fade-up">
                     <p class="text-white-50">Belum ada berita yang ditampilkan.</p>
@@ -125,13 +132,7 @@
             @endforelse
 
             <!-- Tombol -->
-            <div class="col-12 text-center mt-4" data-aos="fade-up">
-                <a href="{{ route('frontend.berita.show', $item->slug) }}"
-                    class="btn custom-btn custom-border-btn btn-sm mt-2">
-                    Baca Selengkapnya
-                    <i class="bi-arrow-right ms-2"></i>
-                </a>
-            </div>
+
         </div>
     </div>
 </section>
