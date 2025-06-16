@@ -22,7 +22,9 @@
                 <li class="nav-item">
                     <a class="nav-link {{ Route::is('frontend.berita*') ? 'active' : '' }}" href="{{ route('frontend.berita') }}">Berita</a>
                 </li>
-                <a href="https://wa.me/6281171018841" target="_blank" style="background:#ff6b35; color:white; padding:18px 15px; border-radius:25px; text-decoration:none; font-weight:600;">Buy Now</a>
+                <li class="nav-item">
+                    <a href="https://wa.me/6281171018841" target="_blank" class="custom-btn-buy" style="background:#ff6b35; color:white; padding:18px 15px; border-radius:25px; text-decoration:none; font-weight:600;">Buy Now</a>
+                </li>
             </ul>
         </div>
     </div>

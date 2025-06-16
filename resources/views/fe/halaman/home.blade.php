@@ -544,13 +544,8 @@
 </section>
 
 
-<section class="section-padding news-bg" id="section_4">
-    <div class="floating-shapes">
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
+<section class="section-padding about-section" id="section_4">
+    <div class="section-overlay"></div>
     <div class="container position-relative z-1">
       <div class="row justify-content-center">
         <div class="col-lg-12 col-12 text-center mb-5 position-relative">
@@ -766,14 +761,14 @@
 }
 
 .faq-title {
-    color: #8B4513 !important; /* Coklat gelap untuk judul */
+    color: #ffebdd !important; /* Coklat gelap untuk judul */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 </style>
 
 <div class="row justify-content-center">
     <div class="col-lg-10 col-12">
-        <h2 class="text-center mb-4 faq-title">FAQ</h2>
+        <h2 class="text-center mb-4 faq-title" >FAQ</h2>
 
         <div class="accordion faq-accordion" id="faqAccordion">
             {{-- FAQ Item 1 --}}

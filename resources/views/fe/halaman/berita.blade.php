@@ -438,7 +438,7 @@
                      data-aos-delay="{{ 150 + ($index * 100) }}"
                      data-aos-duration="800">
                     <div class="news-card tilt-card shadow-lg w-100">
-                        <div class="news-image" style="aspect-ratio: 4/3; min-height: 280px;">
+                        <div class="news-image" style="min-height: 280px;">
                             <img src="{{ $item->gambar ? asset('storage/' . $item->gambar) : asset('pkpjbc/images/E1a.jpg') }}"
                                  alt="{{ $item->judul }}"
                                  class="w-100 h-100"
