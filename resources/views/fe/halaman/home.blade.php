@@ -554,11 +554,11 @@
 
             <!-- Subjudul -->
             <em class="text-muted text-uppercase" style="letter-spacing: 2px;" data-aos="fade-up" data-aos-delay="100">
-            <strong class="text-gold">pkpjbc</strong>
+            <strong class="text-white">pkpjbc</strong>
             </em>
 
             <!-- Judul utama -->
-            <h2 class="display-4 fw-bold text-gold title-shadow" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="display-4 fw-bold text-white title-shadow" data-aos="fade-up" data-aos-delay="200">
               Galeri JBC
             </h2>
 

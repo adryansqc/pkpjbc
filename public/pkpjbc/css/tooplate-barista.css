@@ -539,7 +539,7 @@ strong {
   background-color: var(--dark-color);
   position: relative;
   overflow: hidden;
-  min-height: 620px;
+  min-height: 920px;
   text-align: center;
 }
 
