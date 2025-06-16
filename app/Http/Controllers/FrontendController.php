@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Models\Faq;
 use App\Models\Foto;
 use App\Models\Galeri;
 use App\Models\Produk;
@@ -19,9 +20,10 @@ class FrontendController extends Controller
         $unggulan = Produk::where('unggulan', 1)->latest()->take(4)->get();
         $galeri = Galeri::where('published', 1)->latest()->take(6)->get();
         $video = Video::where('aktif', 1)->first();
+        $faq = Faq::latest()->get();
         $listProduk = ProdukList::orderBy('id', 'asc')->get();
         $berita = Berita::where('status', 1)->latest()->take(3)->get();
-        return view('fe.halaman.home', compact('imageSlider', 'unggulan', 'galeri', 'listProduk', 'berita', 'video'));
+        return view('fe.halaman.home', compact('imageSlider', 'unggulan', 'galeri', 'listProduk', 'berita', 'video', 'faq'));
     }
 
     public function tentang()

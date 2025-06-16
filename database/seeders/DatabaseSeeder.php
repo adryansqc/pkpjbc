@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             TypeSeeder::class,
             ProdukSeeder::class,
             ConfigSeeder::class,
+            FaqSeeder::class,
         ]);
     }
 }

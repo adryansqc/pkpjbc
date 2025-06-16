@@ -771,51 +771,34 @@
         <h2 class="text-center mb-4 faq-title" >FAQ</h2>
 
         <div class="accordion faq-accordion" id="faqAccordion">
-            {{-- FAQ Item 1 --}}
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne"
-                            aria-expanded="true"
-                            aria-controls="collapseOne">
-                        Di JBC itu akan dibangun apa saja?
-                    </button>
-                </h2>
-                <div id="collapseOne"
-                     class="accordion-collapse collapse show"
-                     aria-labelledby="headingOne"
-                     data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Kawasan Pusat Bisnis dengan konsep superblock yang terdiri dari Mall, Hotel, Convention Center dan Ruko.
+            @forelse($faq as $index => $item)
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading{{ $index }}">
+                        <button class="accordion-button {{ $index == 0 ? '' : 'collapsed' }}"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse{{ $index }}"
+                                aria-expanded="{{ $index == 0 ? 'true' : 'false' }}"
+                                aria-controls="collapse{{ $index }}">
+                            {{ $item->pertanyaan }}
+                        </button>
+                    </h2>
+                    <div id="collapse{{ $index }}"
+                         class="accordion-collapse collapse {{ $index == 0 ? 'show' : '' }}"
+                         aria-labelledby="heading{{ $index }}"
+                         data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            {{ $item->jawaban }}
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            {{-- FAQ Item 2 --}}
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseTwo">
-                        Kapan pembangunan mall akan selesai?
-                    </button>
-                </h2>
-                <div id="collapseTwo"
-                     class="accordion-collapse collapse"
-                     aria-labelledby="headingTwo"
-                     data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Proses pembangunan Mall JBC sedang underconstruction yang akan di targetkan selesai pada akhir 2026!
+            @empty
+                <div class="accordion-item">
+                    <div class="accordion-body text-center">
+                        Belum ada FAQ yang tersedia saat ini.
                     </div>
                 </div>
-            </div>
-
-            {{-- Add more FAQ items here if needed --}}
+            @endforelse
         </div>
     </div>
 </div>
