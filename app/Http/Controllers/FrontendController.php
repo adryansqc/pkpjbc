@@ -21,7 +21,7 @@ class FrontendController extends Controller
         $galeri = Galeri::where('published', 1)->latest()->take(6)->get();
         $video = Video::where('aktif', 1)->first();
         $faq = Faq::latest()->get();
-        $listProduk = ProdukList::orderBy('id', 'asc')->get();
+        $listProduk = ProdukList::where('status', 0)->orderBy('id', 'asc')->get();
         $berita = Berita::where('status', 1)->latest()->take(3)->get();
         return view('fe.halaman.home', compact('imageSlider', 'unggulan', 'galeri', 'listProduk', 'berita', 'video', 'faq'));
     }
