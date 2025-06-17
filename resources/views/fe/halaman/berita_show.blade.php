@@ -243,7 +243,7 @@
     }
 
     .news-content {
-        color: rgba(255, 255, 255, 0.9);
+        color: rgb(255, 255, 255);
         line-height: 1.8;
         font-size: 16px;
         animation: fadeIn 1s ease-out 0.7s both;

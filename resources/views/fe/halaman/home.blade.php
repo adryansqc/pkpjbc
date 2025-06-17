@@ -690,7 +690,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <strong style="color: white; font-size: 1.5rem; margin-bottom: 20px; display: block; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">KETENTUAN:</strong>
-            <ol style="color: white; font-size: 1.1rem; line-height: 1.8; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); background: rgba(0,0,0,0.3); padding: 30px; border-radius: 10px; backdrop-filter: blur(5px);">
+            <ol style="color: white; font-size: 1.1rem; line-height: 1.3; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); background: rgba(0,0,0,0.3); padding: 30px; border-radius: 10px; backdrop-filter: blur(5px);">
                 <li style="margin-bottom: 15px;">Harga dan PPN bisa berubah sewaktu-waktu</li>
                 <li style="margin-bottom: 15px;">Harga Jual sudah termasuk listrik 2200 watt dan PDAM</li>
                 <li style="margin-bottom: 15px;">Harga Jual belum termasuk Harga Kelebihan Tanah (jika ada), Biaya AJB, Biaya Balik Nama, BPHTB, Biaya KPR dan Biaya-biaya lain yang timbul akibat aturan baru pemerintah</li>

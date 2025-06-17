@@ -65,25 +65,23 @@ class BeritaResource extends Resource
                     ->label('Isi Berita')
                     ->disk('public')
                     ->directory('isi')
-                    // ->fileAttachmentsDisk('public')
-                    // ->fileAttachmentsDirectory('isi')
-                    ->afterStateUpdated(function ($record, $state) {
-                        if ($record && $record->isi) {
-                            preg_match_all('/src="([^"]+)"/', $record->isi, $oldMatches);
-                            $oldAttachments = $oldMatches[1] ?? [];
+                    // ->afterStateUpdated(function ($record, $state) {
+                    //     if ($record && $record->isi) {
+                    //         preg_match_all('/src="([^"]+)"/', $record->isi, $oldMatches);
+                    //         $oldAttachments = $oldMatches[1] ?? [];
 
-                            preg_match_all('/src="([^"]+)"/', $state, $newMatches);
-                            $newAttachments = $newMatches[1] ?? [];
+                    //         preg_match_all('/src="([^"]+)"/', $state, $newMatches);
+                    //         $newAttachments = $newMatches[1] ?? [];
 
-                            $removedAttachments = array_diff($oldAttachments, $newAttachments);
-                            foreach ($removedAttachments as $attachment) {
-                                if (str_contains($attachment, 'isi/')) {
-                                    $path = str_replace('/storage/', '', parse_url($attachment, PHP_URL_PATH));
-                                    Storage::disk('public')->delete($path);
-                                }
-                            }
-                        }
-                    })
+                    //         $removedAttachments = array_diff($oldAttachments, $newAttachments);
+                    //         foreach ($removedAttachments as $attachment) {
+                    //             if (str_contains($attachment, 'isi/')) {
+                    //                 $path = str_replace('/storage/', '', parse_url($attachment, PHP_URL_PATH));
+                    //                 Storage::disk('public')->delete($path);
+                    //             }
+                    //         }
+                    //     }
+                    // })
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('slug')
                     ->disabled()
